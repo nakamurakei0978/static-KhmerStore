@@ -1,0 +1,625 @@
+:root {
+    --c1: #fd980e;
+    --c2: #fdb913;
+    --c3: #ffffff;
+    --c4: #efefef;
+    --c5: #838584;
+    --c6: #2a2a2a;
+    --c7: #000000;
+}
+
+/*@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&display=swap');
+
+.active{
+    background-color: var(--c2);
+    border-radius: 10px 10px 0px 0px;
+    padding: inherit;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  'B612', sans-serif;
+    color: var(--c5);
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 75%;
+    margin: auto;
+}
+.row{
+    display: flex;
+}
+.user{
+    background-color: var(--c6);
+}
+.user .row{
+    justify-content: flex-end;
+}
+.user ul{
+    list-style-type: none;
+    color: var(--c5);
+}
+.user li{
+    display: inline-block;
+}
+.user a{
+    color: var(--c4);
+    display: block;
+    padding: 10px 10px;
+}
+.user a:hover{
+    color: var(--c2);
+    transition: 0.5s;
+}
+.user .imgbox{
+    border: 1px solid var(--c1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin: 5px 5px;
+    background-image: url('../images/account-pic.jpg');
+    background-size: cover;
+}
+.user .drop{
+    display: inline-block;
+}
+.user .dropc{
+    position: absolute;
+    background-color: var(--c6);
+    opacity: 75%;
+    border-radius: 15px;
+    box-shadow: 0px 2px 2px var(--c2);
+    display: none;
+}
+.user .dropc .aboxsize{
+    padding-right: 50px;
+}
+.user .drop:hover .dropc{
+    display: block;
+}
+
+.head{
+    background-color: var(--c7);
+}
+.head .title{
+    color: var(--c2);
+    font-weight: 800;
+    font-size: 55px;
+    padding: 15px 0px;
+}
+.head .row{
+    justify-content: space-between;
+    align-items: center;
+}
+.head .title a{
+    color: var(--c3);
+}
+.head .title i{
+    color: var(--c2);
+}
+.head .title a:hover{
+    color: var(--c2);
+    transition: 0.5s;
+}
+.head .search{
+    height: 40px;
+    width: 400px;
+}
+.head .search input,select,button{
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0px;
+}
+.head .search input{
+    width: 60%;
+    border-right: 1px solid var(--c5);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 0px 20px;
+}
+.head .search select{
+    width: 23%;
+    color: var(--c2)
+}
+.head .search button{
+    width: 17%;
+    background-color: var(--c2);
+    color: var(--c3);
+    border-radius: 0px 20px 0px 0px;
+}
+.head .search button:hover{
+    color: var(--c2);
+    background: var(--c7);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.hnav{
+    background-color: var(--c7);
+    border-bottom: 5px solid var(--c2);
+    box-shadow: 0px 4px 4px var(--c5);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+.hnav .row{
+    justify-content: space-between;
+    align-items: center;
+}
+.hnav ul{
+    list-style-type: none;
+}
+.hnav li{
+    display: inline-block;
+    padding: 10px;
+    font-size: 15px
+}
+.hnav li:hover{
+    background: var(--c2);
+    border-radius: 10px 10px 0px 0px;
+    transition: 0.5s;
+}
+.hnav li i{
+    color: var(--c4);
+}
+.hnav a{
+    color: var(--c4);
+    font-weight: 600;
+}
+.hnav .phone{
+    color: var(--c4);
+    font-size: 20px;
+}
+.hnav .phone i{
+    color: var(--c2);
+}
+
+.vnav{
+    justify-content: space-between;
+    margin-top: 20px;
+    box-shadow: 0px 0px 5px var(--c2);
+    padding: 5px;
+}
+.vnav .left{
+    width: 25%;
+    
+}
+.vnav .right{
+    width: 73%;
+}
+.vnav .left .title{
+    background-color: var(--c7);
+    color: var(--c4);
+    height: 40px;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 0px 15px 0px 0px;
+}
+.vnav .left .title i{
+    color: var(--c4);
+    background-color: var(--c2);
+    padding: 10px;
+}
+.vnav .left .bc{
+    background-color: var(--c4);
+}
+.vnav .left .bc a{
+    display: block;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid var(--c5);
+    margin: 0px 10px 0px 10px;
+}
+.vnav .left .bc a:last-child{
+    border-bottom: none;
+}
+.vnav .left .bc a:hover{
+    color: var(--c2);
+    transition: 0.5s;
+}
+.vnav .left .bc a i{
+    color: var(--c2);
+}
+.vnav .left .bc a i:last-child{
+    float: right;
+}
+.vnav .left .bc .drop{
+    position: relative;
+}
+.vnav .left .bc .drop:last-child a{
+    border-bottom: none;
+}
+.vnav .left .bc .dropc{
+    position: absolute;
+    background-color: var(--c4);
+    top: 0;
+    width: calc(100% + 0px);
+    padding: 0px 0px 0px 0px;
+    transform: translateX(100%);
+    border: 1px solid var(--c5);
+    display: none;
+}
+.vnav .left .bc .drop:hover .dropc{
+    display: block;
+}
+.vnav .left .bc .dropc .drop1{
+    position: relative;
+}
+.vnav .left .bc .dropc .drop1:last-child a{
+    border-bottom: none;
+}
+.vnav .left .bc .dropc .drop1 a{
+    border-bottom: 1px solid var(--c5);
+}
+.vnav .left .bc .dropc .drop1 .dropc1{
+    position: absolute;
+    background-color: var(--c4);
+    top: 0;
+    width: calc(100% + 0px);
+    padding: 0px 0px 0px 0px;
+    transform: translateX(100%);
+    border: 1px solid var(--c5);
+    display: none;
+}
+.vnav .left .bc .dropc .drop1 .dropc1 a{
+border-bottom: 1px solid var(--c5);
+}
+.vnav .left .bc .dropc .drop1 .dropc1 a:last-child{
+    border-bottom: none;
+}
+.vnav .left .bc .dropc .drop1:hover .dropc1{
+    display: block;
+}
+
+.vnav .left .label{
+    background-color: var(--c4);
+    margin-top: 30px;
+    border-left: 5px solid var(--c2);
+    padding: 10px 10px;
+    font-weight: 900;
+    color: var(--c7)
+}
+.vnav .left .border{
+    border: 1px solid var(--c4);
+}
+.vnav .left .border .content{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.vnav .left .border .content .img{
+    border: 1px solid var(--c5);
+    border-radius: 5px;
+    width: 82px;
+    height: 82px;
+}
+.vnav .left .border .content .text{
+    width: calc(100% - 85px);
+    font-size: 13px;
+    line-height: 17px;
+}
+.vnav .left .border .content .text:hover{
+    color: var(--c2);
+}
+.vnav .left .border .content .text .pricenew{
+    font-weight: 900;
+    color: var(--c7);
+    font-size: 17px;
+}
+.vnav .left .border .content .text .priceold{
+    text-decoration: line-through;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.vnav .right .row{
+    justify-content: space-between;
+}
+.vnav .right .bottom{
+    border-bottom: 5px solid var(--c2);
+}
+.vnav .right .bottom .row .title{
+    background-color: var(--c2);
+    color: var(--c4);
+    padding: 11px;
+    border-top-right-radius: 15px;
+    font-weight: 900;
+}
+.vnav .right .bottom .row .gif{
+    height: 40px;
+    padding-left: 2px;
+}
+.vnav .right .bottom .button i{
+    color: var(--c5);
+    padding: 1px;
+    padding-right: 0;
+    font-size: 38px;
+}
+.vnav .right .bottom .button i:hover{
+    color: var(--c2);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.vnav .right .product{
+    display: flex;
+    flex-wrap: wrap;
+}
+.vnav .right .product .box{
+    width: 20%;
+    padding-top: 10px;
+    overflow: hidden;
+}
+.vnav .right .product .box:nth-child(5) .border,.vnav .right .product .box:nth-child(10) .border{
+    border-right: none;
+}
+.vnav .right .product .box:hover .buttongroup{
+    transform: translateX(0);
+    transition: 0.5s;
+}
+.vnav .right .product .box .border{
+    border-right: 1px solid var(--c5);
+    padding: 5px;
+}
+.vnav .right .product .box .border a *{
+    font-size: 15px;
+}
+.vnav .right .product .box .border a .text:hover{
+    color: var(--c2);
+    transition: 0.5s;
+}
+.vnav .right .product .box .border h3{
+    color: var(--c7);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.vnav .right .product .box .buttongroup{
+    text-align: center;
+    transform: translateX(-110%);
+}
+.vnav .right .product .box .buttongroup i{
+    background-color: var(--c4);
+    padding: 8px;
+    color: var(--c7);
+    border-radius: 5px;
+}
+.vnav .right .product .box .buttongroup i:hover{
+    color: var(--c4);
+    background-color: var(--c2);
+    cursor: pointer;
+}
+
+.footer{
+    background-color: var(--c7);
+    margin-top: 20px;
+    border-top: 5px solid var(--c2);
+}
+.footer .row{
+    justify-content: space-between;
+}
+.footer .container .title{
+    color: var(--c4);
+    font-weight: 900;
+    font-size: 20px;
+    padding: 15px 0px;
+    text-align: center;
+    line-height: 50px;
+}
+.footer .container .title a{
+    font-size: 35px;
+    color: var(--c4);
+}
+.footer .container .title a:hover{
+    color: var(--c2);
+    transition: 0.5s;
+}
+.footer .container .title a i{
+    color: var(--c2);
+}
+.footer .container .text{
+    margin-left: -20px;
+    margin-top: -5px;
+    padding-top: 20px;
+}
+.footer .container .text h3{
+    color: var(--c4);
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+.footer .container .text ul{
+    list-style-type: none;
+}
+.footer .container .text ul li{
+    padding-bottom: 5px;
+}
+.footer .container .text ul li i{
+    color: var(--c2);
+}
+.footer .container .text ul li a:hover{
+    color: var(--c2);
+}
+.footer .container .text table{
+    border-spacing: 20px 5px;
+    width: 100%;
+}
+.footer .container .fb a i{
+    font-size: 50px;
+    color: var(--c2);
+    padding: 20px;
+}
+.footer .container .fb a .text{
+    color: var(--c4);
+    padding: 20px;
+    padding-top: 25px;
+    
+}
+.footer .container .fb a .text h3{
+    padding: 0;
+}
+
+.container .right .info *{
+    color: var(--c7);
+}
+.container .right .row .left{
+    border-right: 1px solid var(--c5);
+    width: 48%;
+    padding: 10px;
+}
+.container .right .row .right{
+    width: 50%;
+}
+.container .right .row .right h3{
+    color: var(--c7);
+}
+.container .right .row .right .detail{
+    border-top: 1px solid var(--c5);
+    border-bottom: 1px solid var(--c5);
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+.container .right .row .right .detail h4{
+    color: var(--c7);
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+.container .right .row .right .q{
+    color: var(--c7);
+    margin: 10px 0;
+}
+.container .right .row .right .q span{
+    color: var(--c2);
+    margin: 0 5px;
+}
+.container .right .row .right .q i:hover{
+    color: var(--c2);
+    cursor: pointer;
+}
+.container .right .row .right .q button{
+    border: none;
+    padding: 10px 0;
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: var(--c7);
+    background-color: var(--c4);
+    box-shadow: 0 0 5px var(--c2);
+}
+.container .right .row .right .q button:hover{
+    color: var(--c4);
+    background-color: var(--c2);
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--c7);
+    transition: 0.5s;
+}
+.container .right .bc{
+    background-image: url(../images/underconstruction.jpg);
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+}
+.container .right .bc a{
+    position: absolute;
+    background-color: var(--c4);
+    padding: 10px 0;
+    width: 100px;
+    text-align: center;
+    color: var(--c7);
+    border-radius: 0px 0px 20px 0px;
+}
+.container .right .bc a:hover{
+    color: var(--c4);
+    background-color: var(--c2);
+    transition: 0.5s;
+}
+
+.up{
+    display: inline-block;
+    font-size: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+.up i{
+    color: var(--c2);
+}
+.up .brand{
+    width: 50px;
+    background-color: var(--c2);
+    padding: 2px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px var(--c6);
+}
+.up .brand a{
+    border-bottom: 1px solid var(--c7);
+    padding-bottom: 10px;
+    padding-top: -20px;
+}
+.up .brand a:last-child{
+    border-bottom: none;
+}
+
+@media only screen and (max-width: 720px) {
+    .user *{
+        font-size: 10px;
+    }
+    .user .container .imgbox{
+        display: none;
+    }
+    .head .container{
+        display: block;
+    }
+    .head .container .title{
+        width: 100%;
+        text-align: center;
+    }
+    .head .container .search{
+        width: 100%;
+    }
+    .hnav li{
+        font-size: 9px;
+    }
+    .hnav .phone{
+        display: none;
+    }
+    .vnav .left{
+        display: none;
+    }
+    .vnav .right{
+        width: 100%;
+    }
+    .footer .container .title{
+        width: 100%;
+    }
+    .footer .container .text{
+        display: none;
+    }
+    .footer .container .fb{
+        display: none;
+    }
+    .container{
+        width: 95%;
+    }
+    .container .right .row .left{
+        display: inline;
+    }
+}
+@media only screen and (max-width: 540px) {
+    .user{
+        display: none;
+    }
+    .hnav .row li{
+        display: block;
+    }
+    .vnav .right .product .box{
+        width: 33%;
+    }
+    .hnav{
+        position: static;
+    }
+}
